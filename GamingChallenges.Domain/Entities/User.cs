@@ -1,11 +1,11 @@
-namespace GamingChallenges.Domain;
+namespace GamingChallenges.Domain.Entities;
 public class User
 {
     // PROPRIEDADES DO USUÁRIO
     public Guid UserId { get; set; }
-    public string Username { get; set; }
-    public string Email { get; set; }
-    public string PasswordHash { get; set;}
+    public required string Username { get; set; }
+    public required string Email { get; set; }
+    public required string PasswordHash { get; set;}
     
     // DATAS DO USUÁRIO
     public DateTime CreatedAt { get; set; }

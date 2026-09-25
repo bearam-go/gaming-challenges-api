@@ -1,11 +1,11 @@
-namespace GamingChallenges.Domain;
+namespace GamingChallenges.Domain.Entities;
 
 public class Challenge
 {
     // PROPRIEDADES DE UM DESAFIO
     public Guid ChallengeId { get; set; }
-    public string Title { get; set; }
-    public string GoalDescription { get; set; }
+    public required string Title { get; set; }
+    public required string GoalDescription { get; set; }
     public int GoalCount { get; set; }
 
     // DATAS DO DESAFIO
@@ -14,6 +14,6 @@ public class Challenge
 
     // RESPONSAVEIS DO DESAFIO
     public Guid GrantorId { get; set; }
-    public User Grantor { get; set; }
+    public User Grantor { get; set; } = null!;
     
 }
